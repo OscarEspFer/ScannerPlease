@@ -19,6 +19,7 @@ public class LangugeRanking : MonoBehaviour
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("VAL-Nom",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
+            
         }
         if (Llenguatges.languge == "ESP"){
             string value;

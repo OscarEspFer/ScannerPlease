@@ -13,7 +13,6 @@ public class Next : MonoBehaviour
     public GameObject ferramentes;
     public GameObject scaner;
     public GameObject nom;
-    public GameObject procedencia;
     public GameObject genere;
     public GameObject caducitat;
     public GameObject DNI;
@@ -75,20 +74,14 @@ public class Next : MonoBehaviour
         
     }
     public void OnButtonPress(){
-        if (Llenguatges.languge == "VAL"){
-            StartCoroutine(esperador());
-        }
-        if (Llenguatges.languge == "ESP"){
-            StartCoroutine(esperadorESP());
-        }
-        
+        StartCoroutine(esperador());
     }
     
     IEnumerator esperador(){
         buttonpass.GetComponent<UnityEngine.UI.Button>().interactable = false;
         buttondenied.GetComponent<UnityEngine.UI.Button>().interactable = false;
         string value;
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(1);
         image.GetComponent<UnityEngine.UI.Image>().color = Color.white;
         int numeroespecies;
         if (lvl > 7){
@@ -105,7 +98,7 @@ public class Next : MonoBehaviour
                 int sexe = Llista.generatebool();
                 if (sexe == 0){
                     noms = Llista.generatenom();
-                    Llenguatges.llenguatges.TryGetValue("VAL-Masculí",out value);
+                    Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Masculí",out value);
                     genere.GetComponent<UnityEngine.UI.Text>().text = value;
                     if (Random.Range(0,8) > 1){
                         switch (Random.Range(0,5)){
@@ -146,7 +139,7 @@ public class Next : MonoBehaviour
                 }
                 else{
                     noms = Llista.generatenomdona();
-                    Llenguatges.llenguatges.TryGetValue("VAL-Femení",out value);
+                    Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Femení",out value);
                     genere.GetComponent<UnityEngine.UI.Text>().text = value;
                     if (Random.Range(0,8) > 1){
                         switch (Random.Range(0,5)){
@@ -191,7 +184,7 @@ public class Next : MonoBehaviour
                 noms = Llista.generatenommamutidamies();
                 switch (sexe){
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Estandar",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Estandar",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesStandar;
@@ -201,7 +194,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Banya",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Banya",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesTrencat;
@@ -211,7 +204,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Curta",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Curta",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesCurt;
@@ -220,7 +213,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     case 4:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Orelles",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Orelles",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesOrelles;
@@ -229,7 +222,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Orelles",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Orelles",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesOrelles;
@@ -247,7 +240,7 @@ public class Next : MonoBehaviour
                 switch (sexe){
                     case 0:
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Roig",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Roig",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumRoig;
@@ -257,7 +250,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Groc",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Groc",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumGroc;
@@ -267,7 +260,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Verd",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Verd",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumVerd;
@@ -276,7 +269,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     case 4:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Morat",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Morat",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumMorat;
@@ -285,7 +278,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Morat",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Morat",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumMorat;
@@ -303,7 +296,7 @@ public class Next : MonoBehaviour
                 switch (sexe){
                     case 0:
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Roig",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Roig",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRoig;
@@ -313,7 +306,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Negre",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Negre",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioNegre;
@@ -323,7 +316,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Verd",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Verd",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioVerd;
@@ -332,7 +325,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     case 4:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Rosa",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Rosa",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRosa;
@@ -341,7 +334,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Rosa",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Rosa",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRosa;
@@ -358,7 +351,7 @@ public class Next : MonoBehaviour
                 switch (sexe){
                     case 0:
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Flac",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Flac",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaFlac;
@@ -368,7 +361,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Gros",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Gros",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaGros;
@@ -378,7 +371,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Pelut",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Pelut",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaPelut;
@@ -387,7 +380,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Pelut",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Pelut",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaPelut;
@@ -404,7 +397,7 @@ public class Next : MonoBehaviour
                 switch (sexe){
                     case 0:
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Tronc",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Tronc",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFungicTronc;
@@ -414,7 +407,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-champi",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-champi",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFungicXampi;
@@ -424,7 +417,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-multiple",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-multiple",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFungicMultiple;
@@ -433,7 +426,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-multiple",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-multiple",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFungicMultiple;
@@ -450,7 +443,7 @@ public class Next : MonoBehaviour
                 switch (sexe){
                     case 0:
                     case 1: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Rosa",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Rosa",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarVaranuRosa;
@@ -460,7 +453,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 2: {
-                        Llenguatges.llenguatges.TryGetValue("VAL-Roig",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Roig",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarVaranuRoig;
@@ -470,7 +463,7 @@ public class Next : MonoBehaviour
                     }
                     break;
                     case 3:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Verd",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Verd",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarVaranuVerd;
@@ -479,7 +472,7 @@ public class Next : MonoBehaviour
                         }
                     } break;
                     default:{
-                        Llenguatges.llenguatges.TryGetValue("VAL-Verd",out value);
+                        Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Verd",out value);
                         genere.GetComponent<UnityEngine.UI.Text>().text = value;
                         if (Random.Range(0,8) > 1){
                             avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarVaranuVerd;
@@ -494,7 +487,7 @@ public class Next : MonoBehaviour
                 int sexe = Llista.generatebool();
                 if (sexe == 0){
                     noms = Llista.generatenom();
-                    Llenguatges.llenguatges.TryGetValue("VAL-Masculí",out value);
+                    Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Masculí",out value);
                     genere.GetComponent<UnityEngine.UI.Text>().text = value;
                     if (Random.Range(0,8) > 1){
                         avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
@@ -504,7 +497,7 @@ public class Next : MonoBehaviour
                 }
                 else{
                     noms = Llista.generatenomdona();
-                    Llenguatges.llenguatges.TryGetValue("VAL-Femení",out value);
+                    Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Femení",out value);
                     genere.GetComponent<UnityEngine.UI.Text>().text = value;
                     if (Random.Range(0,8) > 1){
                         avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
@@ -527,7 +520,7 @@ public class Next : MonoBehaviour
                         else{
                             DNItreball.GetComponent<UnityEngine.UI.Text>().text = DNI.GetComponent<UnityEngine.UI.Text>().text;
                         }
-                        professiotreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generateprofessio("VAL");
+                        professiotreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generateprofessio(Llenguatges.languge);
                         caducitattreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generatecaducitat();
                         break;
 
@@ -539,7 +532,7 @@ public class Next : MonoBehaviour
             treball.gameObject.SetActive(false);
         }
         if (lvl >= 6){
-            scaner.GetComponent<UnityEngine.UI.Text>().text = Llista.generatescaner("VAL");
+            scaner.GetComponent<UnityEngine.UI.Text>().text = Llista.generatescaner(Llenguatges.languge);
             scaneractive = true;
         }
         else{
@@ -548,404 +541,17 @@ public class Next : MonoBehaviour
         if (lvl >= 8){
             int salutvalue = Random.Range(1,10);
             if (salutvalue <= 2){
-                Llenguatges.llenguatges.TryGetValue("VAL-Malalt",out value);
+                Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Malalt",out value);
                 salut.GetComponent<UnityEngine.UI.Text>().text = value;
             }
             else{
-                Llenguatges.llenguatges.TryGetValue("VAL-Saludable",out value);
+                Llenguatges.llenguatges.TryGetValue(Llenguatges.languge+"-Saludable",out value);
                 salut.GetComponent<UnityEngine.UI.Text>().text = value;
             }
         }
         salut.gameObject.SetActive(false);
         scaner.gameObject.SetActive(false);
         nom.GetComponent<UnityEngine.UI.Text>().text = noms;
-        procedencia.GetComponent<UnityEngine.UI.Text>().text = "text";
-        caducitat.GetComponent<UnityEngine.UI.Text>().text = Llista.generatecaducitat();
-        
-        
-        buttondenied.GetComponent<UnityEngine.UI.Button>().interactable = true;
-        buttonpass.GetComponent<UnityEngine.UI.Button>().interactable = true;
-    }
-    IEnumerator esperadorESP(){
-        buttonpass.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        buttondenied.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        string value;
-        yield return new WaitForSecondsRealtime(2);
-        image.GetComponent<UnityEngine.UI.Image>().color = Color.white;
-        int numeroespecies;
-        if (lvl > 4){
-            numeroespecies = 5;
-        }
-        else{
-            numeroespecies = lvl;
-        }
-        int especie = Random.Range(1,numeroespecies);
-        
-        switch (especie){
-
-            case 1: {
-                int sexe = Llista.generatebool();
-                if (sexe == 0){
-                    noms = Llista.generatenom();
-                    Llenguatges.llenguatges.TryGetValue("ESP-Masculí",out value);
-                    genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                    if (Random.Range(0,8) > 1){
-                        switch (Random.Range(0,5)){
-                            case 0: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                                    break;
-                            case 1: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas2;
-                                    break;
-                            case 2: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas3;
-                                    break;
-                            case 3: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas4;
-                                    break;
-                            case 4: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas5;
-                                    break;
-                            case 5: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas6;
-                                    break;
-                            default: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                                    break;
-                        }
-                        
-                    }else{
-                        switch (Random.Range(0,5)){
-                            case 0: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                                    break;
-                            case 1: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem2;
-                                    break;
-                            case 2: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem3;
-                                    break;
-                            case 3: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem4;
-                                    break;
-                            case 4: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem5;
-                                    break;
-                            case 5: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem6;
-                                    break;
-                            default: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                                    break;
-                        }
-                    }
-                }
-                else{
-                    noms = Llista.generatenomdona();
-                    Llenguatges.llenguatges.TryGetValue("ESP-Femení",out value);
-                    genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                    if (Random.Range(0,8) > 1){
-                        switch (Random.Range(0,5)){
-                            case 0: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                                    break;
-                            case 1: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem2;
-                                    break;
-                            case 2: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem3;
-                                    break;
-                            case 3: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem4;
-                                    break;
-                            case 4: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem5;
-                                    break;
-                            case 5: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem6;
-                                    break;
-                            default: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                                    break;
-                        }
-                    }else{
-                        switch (Random.Range(0,5)){
-                            case 0: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                                    break;
-                            case 1: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas2;
-                                    break;
-                            case 2: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas3;
-                                    break;
-                            case 3: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas4;
-                                    break;
-                            case 4: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas5;
-                                    break;
-                            case 5: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas6;
-                                    break;
-                            default: avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                                    break;
-                        }
-                    }
-                }
-            }
-            break;
-            case 2:{
-                int sexe = Random.Range(1,4);
-                noms = Llista.generatenommamutidamies();
-                switch (sexe){
-                    case 1: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Estandar",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesStandar;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesTrencat;
-                        }
-                    }
-                    break;
-                    case 2: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Banya",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesTrencat;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesStandar;
-                        }
-                    }
-                    break;
-                    case 3:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Curta",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesCurt;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesOrelles;
-                        }
-                    } break;
-                    case 4:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Orelles",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesOrelles;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesCurt;
-                        }
-                    } break;
-                    default:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Orelles",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesOrelles;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMamutidamiesCurt;
-                        }
-                        break;
-                    }
-                }
-            }
-            break;
-            case 3:{
-                int sexe = Random.Range(1,4);
-                noms = Llista.generatenomosmium();
-                switch (sexe){
-                    case 0:
-                    case 1: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Roig",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumRoig;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumGroc;
-                        }
-                    }
-                    break;
-                    case 2: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Groc",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumGroc;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumVerd;
-                        }
-                    }
-                    break;
-                    case 3:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Verd",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumVerd;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumRoig;
-                        }
-                    } break;
-                    case 4:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Morat",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumMorat;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumRoig;
-                        }
-                    } break;
-                    default:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Morat",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumMorat;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarOsmiumRoig;
-                        }
-                        break;
-                    }
-                }
-            }
-            break;
-            case 4:{
-                int sexe = Random.Range(1,4);
-                noms = Llista.generatenomoredempcio();
-                switch (sexe){
-                    case 0:
-                    case 1: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Roig",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRoig;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioNegre;
-                        }
-                    }
-                    break;
-                    case 2: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Negre",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioNegre;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRoig;
-                        }
-                    }
-                    break;
-                    case 3:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Verd",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioVerd;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRosa;
-                        }
-                    } break;
-                    case 4:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Rosa",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRosa;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioVerd;
-                        }
-                    } break;
-                    default:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Rosa",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioRosa;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarRedempcioVerd;
-                        }
-                        break;
-                    }
-                }
-            }break;
-            case 5:{
-                int sexe = Random.Range(1,3);
-                noms = Llista.generatenomoredempcio();
-                switch (sexe){
-                    case 0:
-                    case 1: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Flac",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaFlac;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaPelut;
-                        }
-                    }
-                    break;
-                    case 2: {
-                        Llenguatges.llenguatges.TryGetValue("ESP-Gros",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaGros;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaFlac;
-                        }
-                    }
-                    break;
-                    case 3:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Pelut",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaPelut;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaGros;
-                        }
-                    } break;
-                    default:{
-                        Llenguatges.llenguatges.TryGetValue("ESP-Pelut",out value);
-                        genere.GetComponent<UnityEngine.UI.Text>().text = value;
-                        if (Random.Range(0,8) > 1){
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaPelut;
-                        }else{
-                            avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarColmenaGros;
-                        }
-                        break;
-                    }
-                }
-            }break;
-            default:{
-                int sexe = Llista.generatebool();
-                if (sexe == 0){
-                    noms = Llista.generatenom();
-                    genere.GetComponent<UnityEngine.UI.Text>().text = "M";
-                    if (Random.Range(0,8) > 1){
-                        avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                    }else{
-                        avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                    }
-                }
-                else{
-                    noms = Llista.generatenomdona();
-                    genere.GetComponent<UnityEngine.UI.Text>().text = "F";
-                    if (Random.Range(0,8) > 1){
-                        avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarFem;
-                    }else{
-                        avatar.GetComponent<UnityEngine.UI.RawImage>().texture = AvatarMas;
-                    }
-                }
-                break;
-            }
-        }
-        DNI.GetComponent<UnityEngine.UI.Text>().text = Llista.generateDNI();
-        int documents = Random.Range(1,3);
-        if (lvl >= 4){
-            switch(documents){
-                case 1: treball.gameObject.SetActive(false); break;
-                case 2: treball.gameObject.SetActive(true);
-                        if(Random.Range(1,10)<=2){
-                            DNItreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generateDNI(DNI.GetComponent<UnityEngine.UI.Text>().text);
-                        }
-                        else{
-                            DNItreball.GetComponent<UnityEngine.UI.Text>().text = DNI.GetComponent<UnityEngine.UI.Text>().text;
-                        }
-                        professiotreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generateprofessio("ESP");
-                        caducitattreball.GetComponent<UnityEngine.UI.Text>().text = Llista.generatecaducitat();
-                        break;
-
-                default: treball.gameObject.SetActive(false);
-                        break;
-            }
-        }
-        else{
-            treball.gameObject.SetActive(false);
-        }
-        if (lvl >= 6){
-            scaner.GetComponent<UnityEngine.UI.Text>().text = Llista.generatescaner("ESP");
-            scaneractive = true;
-        }
-        else{
-            ferramentes.gameObject.SetActive(false);
-        }
-        if (lvl >= 8){
-            int salutvalue = Random.Range(1,10);
-            if (salutvalue <= 2){
-                salut.GetComponent<UnityEngine.UI.Text>().text = "Malalt";
-            }
-            else{
-                salut.GetComponent<UnityEngine.UI.Text>().text = "Saludable";
-            }
-        }
-        salut.gameObject.SetActive(false);
-        scaner.gameObject.SetActive(false);
-        nom.GetComponent<UnityEngine.UI.Text>().text = noms;
-        procedencia.GetComponent<UnityEngine.UI.Text>().text = "text";
         caducitat.GetComponent<UnityEngine.UI.Text>().text = Llista.generatecaducitat();
         
         

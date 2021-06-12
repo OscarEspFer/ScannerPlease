@@ -24,7 +24,6 @@ public class PressToShow : MonoBehaviour
             nom = Llista.generatenomdona();
         }
         text.text = nom;
-        Debug.Log(nom);
         if (Llista.generatebool() == 0){
             text2.text = nom;
         }

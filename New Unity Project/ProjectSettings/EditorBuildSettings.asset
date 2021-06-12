@@ -5,88 +5,166 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Menu.unity
+  - enabled: 0
+    path: Assets/Menu-A.unity
     guid: 77af6656d14e6c3468bb32e6752f01d8
-  - enabled: 1
-    path: Assets/1.unity
+  - enabled: 0
+    path: Assets/1-A.unity
     guid: c9df1811e83f8ae46a92cfc727250d04
-  - enabled: 1
-    path: Assets/2.unity
+  - enabled: 0
+    path: Assets/2-A.unity
     guid: 36a80de17822ad94992f1f3e838c8c78
-  - enabled: 1
-    path: Assets/3.unity
+  - enabled: 0
+    path: Assets/3-A.unity
     guid: 8fc19a7cdc2086941b8e3c3297fde887
-  - enabled: 1
-    path: Assets/Missatge1.unity
+  - enabled: 0
+    path: Assets/Missatge1-A.unity
     guid: 5008610e23d97bc46a1cdc7d3356c046
-  - enabled: 1
-    path: Assets/Missatge2.unity
+  - enabled: 0
+    path: Assets/Missatge2-A.unity
     guid: 69216bc8fd49f3c4a99a8ddcbf4edbac
-  - enabled: 1
-    path: Assets/Missatge3.unity
+  - enabled: 0
+    path: Assets/Missatge3-A.unity
     guid: 1d90a307e32ce4e4dae22dee91038d0f
-  - enabled: 1
-    path: Assets/Missatge4.unity
+  - enabled: 0
+    path: Assets/Missatge4-A.unity
     guid: 605612cb59e078a4586cc01ee620a963
-  - enabled: 1
-    path: Assets/Missatge5.unity
+  - enabled: 0
+    path: Assets/Missatge5-A.unity
     guid: 3b83db09c2a7e1946bd7fe3eb169f04a
-  - enabled: 1
-    path: Assets/4.unity
+  - enabled: 0
+    path: Assets/4-A.unity
     guid: 9a66b49b7b650464b9edee051aad0f77
-  - enabled: 1
-    path: Assets/5.unity
+  - enabled: 0
+    path: Assets/5-A.unity
     guid: c39dd367f2358ae47b57b12e382e9889
-  - enabled: 1
-    path: Assets/6.unity
+  - enabled: 0
+    path: Assets/6-A.unity
     guid: 4a0b2ac559cd34a48ace2537a94c9b75
-  - enabled: 1
-    path: Assets/7.unity
+  - enabled: 0
+    path: Assets/7-A.unity
     guid: 9a8272541ff07794196263600aa9eb06
-  - enabled: 1
-    path: Assets/8.unity
+  - enabled: 0
+    path: Assets/8-A.unity
     guid: 09328373297863142b8a585c0043c078
-  - enabled: 1
-    path: Assets/9.unity
+  - enabled: 0
+    path: Assets/9-A.unity
     guid: c0b28b7dac7294f4e80c2c6ed64ad84b
-  - enabled: 1
-    path: Assets/10.unity
+  - enabled: 0
+    path: Assets/10-A.unity
     guid: bd3acb014d8d3f64885db9133966c197
-  - enabled: 1
-    path: Assets/11.unity
+  - enabled: 0
+    path: Assets/11-A.unity
     guid: 47ab38f87e0c7174ca3effdd436f795c
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Selector.unity
+  - enabled: 0
+    path: Assets/Selector-A.unity
     guid: f95dd041c0d07ad489eeb6a63e25766a
-  - enabled: 1
-    path: Assets/Idiomes.unity
+  - enabled: 0
+    path: Assets/Idiomes-A.unity
     guid: 53a02e3644232634d95c94e711700bfd
-  - enabled: 1
-    path: Assets/Missatge6.unity
+  - enabled: 0
+    path: Assets/Missatge6-A.unity
     guid: a635b28503f4f684e90e510868ce9d7f
-  - enabled: 1
-    path: Assets/Missatge7.unity
+  - enabled: 0
+    path: Assets/Missatge7-A.unity
     guid: b9eb6133aa2eae54db7df7e9ed9bc404
-  - enabled: 1
-    path: Assets/Missatge8.unity
+  - enabled: 0
+    path: Assets/Missatge8-A.unity
     guid: 75dbc2d696cd8634ba460dd06a561dc0
-  - enabled: 1
-    path: Assets/Missatge9.unity
+  - enabled: 0
+    path: Assets/Missatge9-A.unity
     guid: 1c0d2aa49151bc649b0dba1fb2f8dfdf
-  - enabled: 1
-    path: Assets/Ranking.unity
+  - enabled: 0
+    path: Assets/Ranking-A.unity
     guid: 552908ab432df304fb86759391373288
-  - enabled: 1
-    path: Assets/Missatge10.unity
+  - enabled: 0
+    path: Assets/Missatge10-A.unity
     guid: ed4122f8995f4094aa6d923c2d80014e
-  - enabled: 1
-    path: Assets/Missatge11.unity
+  - enabled: 0
+    path: Assets/Missatge11-A.unity
     guid: 160ecb3070eb8f149b8a8670e69fd349
   - enabled: 0
-    path: Assets/prova.unity
-    guid: 5988aba7bf9ed654bb67ea5226fa619b
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/WindowsScennes/Menu-W.unity
+    guid: ec30ec6e79f013d4f8d3f8642ef7e598
+  - enabled: 1
+    path: Assets/WindowsScennes/1-W.unity
+    guid: 4a5a8c23a6162a94c96ee29fc6e23302
+  - enabled: 1
+    path: Assets/WindowsScennes/2-W.unity
+    guid: d81e989fd8e3fc44da92c44d436d2294
+  - enabled: 1
+    path: Assets/WindowsScennes/3-W.unity
+    guid: ad8ebb26b7952ad4da17e13659ed7469
+  - enabled: 1
+    path: Assets/WindowsScennes/4-W.unity
+    guid: 56ed8472b26bc7e4cbbf97bf38484d95
+  - enabled: 1
+    path: Assets/WindowsScennes/5-W.unity
+    guid: a70e90b491b601d42b8b185b12b59662
+  - enabled: 1
+    path: Assets/WindowsScennes/6-W.unity
+    guid: cd38cc9ad6e2a054d98830b04cef6965
+  - enabled: 1
+    path: Assets/WindowsScennes/7-W.unity
+    guid: 18e2409b929e6a246be0f106520ec841
+  - enabled: 1
+    path: Assets/WindowsScennes/8-W.unity
+    guid: 1a320ee22d25db34f8c7b2861c1a953e
+  - enabled: 1
+    path: Assets/WindowsScennes/9-W.unity
+    guid: d7f51f95defd40a429db72d7feab295a
+  - enabled: 1
+    path: Assets/WindowsScennes/10-W.unity
+    guid: 5407074f9a921a248b0977699f765985
+  - enabled: 1
+    path: Assets/WindowsScennes/11-W.unity
+    guid: 3b6649d8ed37c844da14029ec1aad760
+  - enabled: 1
+    path: Assets/WindowsScennes/Idiomes-W.unity
+    guid: a3378f30f002a7c43a4132a86016275a
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge1-W.unity
+    guid: 1f6d9bb8a1127a3439d9c7c58e3e24df
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge2-W.unity
+    guid: 9569fbf57af8c284ca9c873986afd518
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge3-W.unity
+    guid: e3a504387add9ea40b9a481737e5cd84
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge4-W.unity
+    guid: ed34e9fcd7b098645be2bde6538ba1e9
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge5-W.unity
+    guid: 68d4486bc4d9e9a4bbb1e663f98d3256
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge6-W.unity
+    guid: b3ef2825c2422714bab806c1e8ba1a4f
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge7-W.unity
+    guid: 34884763517712a488e94bc6096c83e7
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge8-W.unity
+    guid: 2ad44540aa8b4954f862f472769f9bdd
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge9-W.unity
+    guid: 11dd8cc1b3f972b46a8b8fce7ff104c2
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge10-W.unity
+    guid: 9536ec7bc888e9341b21b2277ba27503
+  - enabled: 1
+    path: Assets/WindowsScennes/Missatge11-W.unity
+    guid: c4b7e5b55ccfa8847ab9b9a22be24080
+  - enabled: 1
+    path: Assets/WindowsScennes/Ranking-W.unity
+    guid: 4db34eabfda7c6d459886494083f0d61
+  - enabled: 1
+    path: Assets/WindowsScennes/Selector-W.unity
+    guid: 4785e9fbddd6f7948bbb9466cbdddab9
   m_configObjects: {}

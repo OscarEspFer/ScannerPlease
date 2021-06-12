@@ -16,8 +16,11 @@ public class StartGame : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Menu" && infinit == 1){
             GameObject.Find("Infinit").GetComponent<UnityEngine.UI.Button>().interactable = true;
         }
-        else{
+        else if (SceneManager.GetActiveScene().name == "Menu"){
             GameObject.Find("Infinit").GetComponent<UnityEngine.UI.Button>().interactable = false;
+        }
+        else{
+            
         }
     }
 

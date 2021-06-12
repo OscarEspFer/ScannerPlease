@@ -50,26 +50,32 @@ public class ComprovadorsDenied : MonoBehaviour
     public Texture avatarVaranuRoig;
     public Texture avatarVaranuRosa;
     public GameObject TempsScript;
+    public AudioSource correcte;
+    public AudioSource Incorrecte;
     public void OnButtonPress(){
         if (PCR.activeSelf){
             if (treball.activeSelf){
             if (comprovascaner()&&comprovacaducitat(caducitat)&&comprovagenere()&&comprovatreball()&&comprovaPCR()){
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                 TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                Incorrecte.Play();
             }
             else{
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                 TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                correcte.Play();
             }
             }
             else{
                 if(comprovacaducitat(caducitat) && comprovagenere()&&comprovascaner()&&comprovaPCR()){
                     image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                     TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                    Incorrecte.Play();
                 }
                 else{
                     image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                     TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                    correcte.Play();
                 }
             }
         }
@@ -78,20 +84,24 @@ public class ComprovadorsDenied : MonoBehaviour
             if (comprovascaner()&&comprovacaducitat(caducitat)&&comprovagenere()&&comprovatreball()){
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                 TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                Incorrecte.Play();
             }
             else{
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                 TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                correcte.Play();
             }
             }
             else{
                 if(comprovacaducitat(caducitat) && comprovagenere()&&comprovascaner()){
                     image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                     TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                    Incorrecte.Play();
                 }
                 else{
                     image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                     TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                    correcte.Play();
                 }
             }
         }
@@ -99,22 +109,26 @@ public class ComprovadorsDenied : MonoBehaviour
             if (comprovacaducitat(caducitat)&&comprovagenere()&&comprovatreball()){
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                 TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                Incorrecte.Play();
             }
             else{
 
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                 TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                correcte.Play();
             }
         }
         else{
             if(comprovacaducitat(caducitat) && comprovagenere()){
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.red;
                 TempsScript.GetComponent<Temps>().vides = TempsScript.GetComponent<Temps>().vides+1;
+                Incorrecte.Play();
             }
             else{
                 
                 image.GetComponent<UnityEngine.UI.Image>().color = Color.green;
                 TempsScript.GetComponent<Temps>().benfets = TempsScript.GetComponent<Temps>().benfets+1;
+                correcte.Play();
             }
         }
     }
