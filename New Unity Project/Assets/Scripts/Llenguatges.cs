@@ -319,8 +319,8 @@ public class Llenguatges : MonoBehaviour
         llenguatges.Add("ESP-Puntuació","Tu puntuación és:");
         llenguatges.Add("ENG-Puntuació","Your score is:");
         llenguatges.Add("ROM-Puntuació","Punctajul tău este:");
-        llenguatges.Add("UKR-Puntuació","");
-        llenguatges.Add("RUS-Puntuació","");
+        llenguatges.Add("UKR-Puntuació","Ваші бали:");
+        llenguatges.Add("RUS-Puntuació","Ваши баллы");
 
         llenguatges.Add("VAL-Nom","Introdueix el teu nom");
         llenguatges.Add("ESP-Nom","Introduce tu nombre");

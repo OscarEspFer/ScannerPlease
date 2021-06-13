@@ -18,7 +18,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("VAL-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("VAL-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
             
         }
         if (Llenguatges.languge == "ESP"){
@@ -30,7 +30,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("ESP-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("ESP-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
         }
         if (Llenguatges.languge == "ENG"){
             string value;
@@ -41,7 +41,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("ENG-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("ENG-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
         }
         if (Llenguatges.languge == "ROM"){
             string value;
@@ -52,7 +52,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("ROM-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("ROM-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
         }
         if (Llenguatges.languge == "UKR"){
             string value;
@@ -63,7 +63,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("UKR-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("UKR-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
         }
         if (Llenguatges.languge == "RUS"){
             string value;
@@ -74,7 +74,7 @@ public class LangugeRanking : MonoBehaviour
             Llenguatges.llenguatges.TryGetValue("RUS-Puntuació",out value);
             text.GetComponent<UnityEngine.UI.Text>().text = value;
             Llenguatges.llenguatges.TryGetValue("RUS-Nom",out value);
-            text.GetComponent<UnityEngine.UI.Text>().text = value;
+            nom.GetComponent<UnityEngine.UI.Text>().text = value;
         }
     }
 
